@@ -12,7 +12,8 @@ def get_system_info():
     print("\n" + "="*20, "RUNNING PROCESSES", "="*20)
     for process in psutil.process_iter(['pid', 'name']):
         try:
-            print(f"ID: {process.info['pid']} | Name: {process.info['name']}")
+  
+          print(f"ID: {process.info['pid']} | Name: {process.info['name']}")
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             pass
 
